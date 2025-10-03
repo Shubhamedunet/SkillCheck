@@ -85,5 +85,5 @@ PWA support
 
 Developer: Shubham Tripathi
 
-[Email Me](mailto:shubham.tripathi0612@gmail.com)
+Email Me:[shubham.tripathi0612@gmail.com](mailto:shubham.tripathi0612@gmail.com)
 
