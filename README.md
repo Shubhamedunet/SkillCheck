@@ -11,12 +11,10 @@
 1. [Features](#features)  
 2. [Tech Stack](#tech-stack)  
 3. [Planning & Design](#planning--design)  
-4. [Setup & Installation](#setup--installation)  
-5. [Usage](#usage)  
-6. [Deployment](#deployment)  
-7. [Project Structure](#project-structure)  
-8. [Future Improvements](#future-improvements)  
-9. [Credits & License](#credits--license)  
+4. [Usage](#usage)  
+5. [Deployment](#deployment)   
+6. [Future Improvements](#future-improvements)  
+7. [Credits & License](#credits--license)  
 
 ---
 
@@ -49,7 +47,7 @@
 
 ---
 
-🚀 Usage
+## 🚀 Usage
 
 Open the homepage.
 
@@ -61,13 +59,13 @@ Submit quiz to see results.
 
 Retake or explore more quizzes.
 
-🌍 Deployment
+## 🌍 Deployment
 
 Hosted with GitHub Pages.
 
 Steps: push repo → enable Pages in settings → get live link.
 
-🔮 Future Improvements
+## 🔮 Future Improvements
 
 Persistent user data with database
 
@@ -83,7 +81,7 @@ Timed quizzes
 
 PWA support
 
-🙌 Credits & License
+## 🙌 Credits & License
 
 Developer: Shubham Tripathi
 
