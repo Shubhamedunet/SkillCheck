@@ -83,7 +83,7 @@ PWA support
 
 ## 🙌 Credits & License
 
-Developer: Shubham Tripathi
+**Developer:** Shubham Tripathi
 
-Email Me:[shubham.tripathi0612@gmail.com](mailto:shubham.tripathi0612@gmail.com)
+**Email Me:**[shubham.tripathi0612@gmail.com](mailto:shubham.tripathi0612@gmail.com)
 
