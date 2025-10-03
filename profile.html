@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Skillcheck - Profile & Quiz Selection</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <img src="assets/SkillCheck.png" alt="Skillcheck logo" class="logo" />
+        <div>
+          <span class="brand-name">SkillCheck</span>
+          <span class="brand-tagline">Test your knowledge, sharpen your skills</span>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#" id="profileBtn">Profile</a></li>
+        <li><a href="#" id="takeQuizBtn">Take Quiz</a></li>
+        <li><a href="index.html" id="logoutBtn">Logout</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="main-bg profile-bg">
+      <section class="profile-section container" tabindex="0">
+        <h2>👤 Your Profile</h2>
+        <div class="profile-info">
+          <p><strong>Name:</strong> <span id="profileName"></span></p>
+          <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+          <p><strong>🌟 High Score:</strong> <span id="profileHighscore"></span></p>
+          <button id="logoutMainBtn" class="logout-btn">Logout</button>
+        </div>
+      </section>
+
+      <section class="quiz-selection container">
+        <h2>📚 Choose Your Quiz Subject</h2>
+        <p>Select a category below to start a quiz.</p>
+        <div id="categoryContainer" class="category-container"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Made with <span style="color: red">&#10084;</span> by Shubham Tripathi</p>
+      <p>SkillCheck helps you sharpen your skills with quizzes on diverse topics powered by Open Trivia DB.</p>
+    </div>
+  </footer>
+
+  <script src="profile.js"></script>
+  <script>
+    document.getElementById("navToggle").onclick = () => {
+      document.querySelector(".nav-links").classList.toggle("show");
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Skillcheck - Login / Signup</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="brand">
+          <img src="assets/SkillCheck.png" alt="Skillcheck logo" class="logo" />
+          <div>
+            <span class="brand-name">SkillCheck</span>
+            <span class="brand-tagline"
+              >Test your knowledge, sharpen your skills</span
+            >
+          </div>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#" id="aboutBtn">About</a></li>
+          <li><a href="#" id="loginBtn">Login</a></li>
+          <li><a href="#" id="signupBtn">Signup</a></li>
+        </ul>
+        <div class="nav-toggle" id="navToggle">&#9776;</div>
+      </nav>
+    </header>
+    <main>
+      <div class="main-bg">
+        <section class="welcome-section">
+          <h1>Welcome to <span class="brand-name">Skillcheck</span></h1>
+          <p>
+            The ultimate destination to test, learn, and track your quiz
+            journey.
+          </p>
+        </section>
+      </div>
+
+      <!-- About Section (now visible, not modal) -->
+      <section class="about-section" id="about">
+        <h2>About SkillCheck</h2>
+        <p>
+          <strong>SkillCheck</strong> is an interactive quiz platform developed
+          by <em>Shubham Tripathi</em>. This app aims to provide learners of all
+          ages a fun and engaging way to test their knowledge across diverse
+          subjects.
+        </p>
+        <p>
+          It was created with modern web technologies (HTML, CSS, JavaScript) to
+          be fully responsive and user-friendly. Users can sign up, track their
+          progress, and sharpen their skills anytime, anywhere.
+        </p>
+        <p>
+          Our goal is to make learning enjoyable while offering useful feedback
+          and insightful results. Feel free to explore the quizzes and challenge
+          yourself!
+        </p>
+      </section>
+
+      <!-- Login Modal -->
+      <div
+        id="loginModal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="loginTitle"
+        tabindex="-1"
+      >
+        <div class="modal-content">
+          <button class="close" id="closeLogin" aria-label="Close">
+            &times;
+          </button>
+          <h2 id="loginTitle">Login to Skillcheck</h2>
+          <form id="loginForm">
+            <input
+              type="text"
+              id="loginUsername"
+              placeholder="Username"
+              required
+              aria-required="true"
+            />
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Password"
+              required
+              aria-required="true"
+            />
+            <button type="submit" class="login-btn">Login</button>
+          </form>
+          <div id="loginError" class="error-message" role="alert"></div>
+        </div>
+      </div>
+
+      <!-- Signup Modal -->
+      <div
+        id="signupModal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="signupTitle"
+        tabindex="-1"
+      >
+        <div class="modal-content">
+          <button class="close" id="closeSignup" aria-label="Close">
+            &times;
+          </button>
+          <h2 id="signupTitle">Sign Up for Skillcheck</h2>
+          <form id="signupForm">
+            <input
+              type="text"
+              id="signupFullname"
+              placeholder="Full Name"
+              required
+              aria-required="true"
+            />
+            <input
+              type="text"
+              id="signupUsername"
+              placeholder="Username"
+              required
+              aria-required="true"
+            />
+            <input
+              type="email"
+              id="signupEmail"
+              placeholder="Email"
+              required
+              aria-required="true"
+            />
+            <input
+              type="password"
+              id="signupPassword"
+              placeholder="Password"
+              required
+              aria-required="true"
+            />
+            <button type="submit" class="signup-btn">Sign Up</button>
+          </form>
+          <div id="signupError" class="error-message" role="alert"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p>
+          Made with <span style="color: red">&#10084;</span> by Shubham Tripathi
+        </p>
+        <p>
+          SkillCheck is the modern quiz platform for learners of all ages. Play
+          anywhere, anytime!
+        </p>
+      </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script>
+      // Navbar toggle mobile
+      document.getElementById("navToggle").onclick = function () {
+        document.querySelector(".nav-links").classList.toggle("show");
+      };
+    </script>
+  </body>
+</html>

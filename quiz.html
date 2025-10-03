@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Skillcheck Quiz</title>
+  <link rel="stylesheet" href="quiz.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="brand">
+        <img src="assets/SkillCheck.png" alt="Skillcheck Logo" class="logo" />
+        <div>
+          <span class="brand-name">SkillCheck</span>
+          <span class="brand-tagline">Test your knowledge, sharpen your skills</span>
+        </div>
+      </div>
+      <ul class="nav-links">
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="select.html">Select Quiz</a></li>
+        <li><a href="index.html" id="logoutBtn">Logout</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">&#9776;</div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container quiz-container">
+      <div id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">🌙</div>
+      <div id="progress-bar"><div id="progress-fill"></div></div>
+      <div id="timer" class="timer"></div>
+      <div id="question-container" class="question-container"></div>
+      <div id="options" class="options-container"></div>
+      <div id="feedback" class="feedback"></div>
+      <div class="btn-container">
+        <button id="nextBtn" disabled>Next</button>
+        <button id="restartBtn">Restart</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="quiz.js"></script>
+  <script>
+    document.getElementById("navToggle").onclick = () => {
+      document.querySelector(".nav-links").classList.toggle("show");
+    };
+  </script>
+</body>
+</html>

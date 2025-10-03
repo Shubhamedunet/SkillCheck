@@ -1,0 +1,248 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make main content fill available height to push footer down */
+.main-bg.profile-bg {
+  flex: 1; /* This makes main expand */
+  padding: 3rem 1.5rem;
+  background: linear-gradient(to right, #00bcd4, #006588);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ===== Navbar ===== */
+header {
+  background: #1e2a38;
+  padding: 0.8rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img.logo {
+  width: 45px;
+  height: auto;
+}
+
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.brand-tagline {
+  display: block;
+  font-size: 0.8rem;
+  color: #9baab8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===== Profile Section ===== */
+.profile-section {
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.profile-section h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1e2a38;
+}
+
+.profile-info p {
+  font-size: 1rem;
+  margin: 0.7rem 0;
+}
+
+.logout-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background: #e53935;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout-btn:hover {
+  background: #b71c1c;
+}
+
+/* ===== Quiz Selection Section ===== */
+.quiz-selection {
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.quiz-selection h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #1e2a38;
+}
+
+.quiz-selection p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+/* Colorful button-like categories */
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+/* Base style for buttons */
+.category-container button {
+  border: none;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: transform 0.25s ease, filter 0.25s ease;
+  background: linear-gradient(135deg, #00bcd4 0%, #00796b 100%);
+}
+
+/* Alternate gradient backgrounds for variation */
+.category-container button:nth-child(4n+1) {
+  background: linear-gradient(135deg, #00bcd4 0%, #00796b 100%);
+}
+
+.category-container button:nth-child(4n+2) {
+  background: linear-gradient(135deg, #ff6f61 0%, #d84315 100%);
+}
+
+.category-container button:nth-child(4n+3) {
+  background: linear-gradient(135deg, #ffca28 0%, #f57f17 100%);
+  color: #333; /* dark text for yellow */
+}
+
+.category-container button:nth-child(4n+4) {
+  background: linear-gradient(135deg, #7b1fa2 0%, #4a148c 100%);
+}
+
+/* Hover effect */
+.category-container button:hover {
+  filter: brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: #1e2a38;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1e2a38;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border-radius: 0 0 8px 8px;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .profile-section,
+  .quiz-selection {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .quiz-selection h2 {
+    font-size: 1.5rem;
+  }
+
+  .category-container {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}

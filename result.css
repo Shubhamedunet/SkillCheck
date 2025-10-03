@@ -1,0 +1,138 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Container ===== */
+.container.result-container {
+  background: #ffffff;
+  max-width: 700px;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.container.result-container h2 {
+  font-size: 2rem;
+  color: #1e2a38;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Score Display ===== */
+.final-score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+.result-feedback {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+/* ===== Review Mode ===== */
+#reviewMode {
+  margin: 2rem 0;
+  text-align: left;
+}
+
+#reviewMode h3 {
+  color: #1e2a38;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.review-list {
+  list-style: none;
+  padding: 0;
+}
+
+.review-list li {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+
+.review-list li:hover {
+  transform: scale(1.02);
+}
+
+/* Correct & Incorrect answers */
+.review-list li.correct {
+  border-left: 6px solid #4caf50;
+}
+
+.review-list li.incorrect {
+  border-left: 6px solid #e53935;
+}
+
+/* ===== Buttons ===== */
+button {
+  margin: 0.8rem;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:first-of-type {
+  background: #00bcd4;
+  color: #fff;
+}
+
+button:first-of-type:hover {
+  background: #0288a7;
+}
+
+button:last-of-type {
+  background: #1e2a38;
+  color: #fff;
+}
+
+button:last-of-type:hover {
+  background: #111a24;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .container.result-container {
+    padding: 1.5rem;
+  }
+
+  .final-score {
+    font-size: 2rem;
+  }
+
+  .result-feedback {
+    font-size: 1rem;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin: 0.6rem 0;
+  }
+}

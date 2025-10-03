@@ -1,0 +1,271 @@
+/* ====== Global Styles ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ====== Navbar ====== */
+header {
+  background: #1e2a38;
+  padding: 0.8rem 1.5rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand img.logo {
+  width: 45px;
+  height: auto;
+}
+
+.brand-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  display: block;
+}
+
+.brand-tagline {
+  font-size: 0.8rem;
+  color: #9baab8;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #00bcd4;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* ====== Hero Section ====== */
+.main-bg {
+  background: linear-gradient(to right, #00bcd4, #006588);
+  padding: 7rem 2rem 4rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ====== Modal Styles ====== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 42, 56, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: #1e2a38;
+  text-align: center;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+}
+
+form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+form input:focus {
+  border-color: #00bcd4;
+}
+
+.login-btn,
+.signup-btn {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  background: #00bcd4;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+  background: #0288a7;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ====== Footer ====== */
+footer {
+  background: #1e2a38;
+  color: #ffffff;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* ====== Animations ====== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1e2a38;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 0 0 5px 5px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .welcome-section h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-section p {
+    font-size: 1rem;
+  }
+}
+/* ====== About Section ====== */
+.about-section {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e2a38;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .about-section h2 {
+    font-size: 1.6rem;
+  }
+}
